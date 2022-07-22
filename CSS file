@@ -1,0 +1,542 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+html {
+  scroll-behavior:smooth;
+}
+
+/* STYLE SECTIONING TAGS */
+* { /* Reset the space of the webpage */
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+ background-color:white;
+}
+
+/* STYLE TEXT */
+#heading-text {
+  color:white;
+  font-family: 'Comfortaa', cursive;
+  padding-top: 8%;
+  font-size:65px;
+  text-shadow: 1px 1px 4px black;
+}
+.header-content {
+  text-align:center;
+  margin:20px;
+}
+
+/* STYLE IMAGES */
+
+.header-img {
+  width: 100%;
+  height: 350px;
+  background-image: url('https://earthday-365.org/wp-content/uploads/2021/03/earth-background-1-1.jpg');
+  background-size: cover;
+  background-position: 20% 25%;
+  overflow: hidden;
+}
+/* STYLE NAV BAR */
+li { 
+  float:right;
+  border-right: 3px solid #C9E3AC;
+}
+li:nth-child(5) {
+  border-left:3px solid #C9E3AC;
+}
+li:first-child {
+  border-right: none;
+}
+li a {
+display:inline-block;  
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #004643;
+  top: 0;
+  width: 100%;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Source Code Pro', monospace;
+  font-size:18px;
+}
+li a:hover {
+  background-color: 
+  #0C1618;
+  color:#DADDD8;
+}
+.logo {
+ float:left;
+  padding:5px;
+  font-size:21px;
+  margin:7px;
+  font-family: 'Edu SA Beginner', cursive;
+}
+.logo a{
+  color:white;
+  text-decoration: none;
+  cursor:default;
+}
+li {
+  color: #C9E3AC;;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  position: relative;
+}
+li::after { 
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  background: none repeat scroll 0 0 transparent;
+  height: 2px;
+  width: 0;
+  background: #C9E3AC;;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+li:hover::after { 
+  width: 100%; 
+  left: 0; 
+}
+
+
+
+/* STYLE BUTTONS */
+#take-action-btn {
+  font-family: 'Inter', sans-serif;
+  font-size:18px;
+  padding:10px;
+  border-radius:40px;
+  letter-spacing: 1.5px;
+  color: white;
+  background:linear-gradient(90deg,#4B5842, #90b53b, #C7D59F);
+  margin:10px;
+  box-shadow: 1px 1px 4px black;
+}
+#take-action-btn:hover {
+  background:black;
+  cursor:pointer;
+}
+
+/* Take a Pledge CSS */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 1em;
+    max-width: 200px;
+    margin: 0 auto;
+    background: #8FB339;
+    border-radius: 5px;
+    box-shadow:1px 1px 8px black;
+    font-family: 'Source Code Pro', monospace;
+  color: #4B5842;
+}
+form * {
+    margin-bottom: 0.65em;
+}
+form > input[type="text"],
+form > input[type="email"],
+form > input[type="submit"]  {
+     border-radius: 5px;
+     box-shadow: 1px 1px 8px black;
+     border: none;
+     padding: 0.5em 1em;
+     align-self: stretch;
+}
+form > p {
+    font-weight: 600;
+}
+form > input[type="submit"]  {
+    background-color: #4B5842;
+    color: white;
+    cursor: pointer;
+    font-family: 'Source Code Pro', monospace;
+    font-size:15px;
+  padding:9px;
+}
+form > input[type="submit"]:hover, form > input[type="submit"]:focus {
+    filter: brightness(1.95);
+}
+form > input[type="submit"] :active {
+    transform: scale(0.96);
+}
+.signed-pledge-paragraph {
+    width: 50%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px black;
+    padding: 1em;
+    margin: 0 auto;
+}
+.checkboxes-container {
+    padding: 0.5em 1em;
+}
+/*BLOCK QUOTES*/
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  position: relative;
+  text-align: left;
+  width: 55%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom:10px;
+  margin-top:10px;
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #666;
+  text-align: justify;
+  
+  /*Borders */
+  border-left: 15px solid #8FB339;
+  border-right: 2px solid #8FB339;
+  
+  /*Box Shadow */
+  box-shadow: 2px 2px 10px #ccc;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+
+/*Understand*/
+.keyIssues{
+}
+.keyTitle {
+  margin:15px;
+  font-family: 'Inter', sans-serif;
+  color:#2A9134;
+  font-size:30px;
+  
+  text-align:center;
+}
+.para {
+  text-align: left;
+  width: 55%;
+  display: block;
+  margin:0 auto;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size:17px;
+}
+.image {
+ display: flex;
+justify-content: center;
+margin: auto;
+  width: 240px; 
+  height:350px;
+  margin-bottom:15px;
+ 
+}
+/*fact gen*/
+.genFact {
+  background: #C7D59F;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 35%;
+  margin-right: 35%;
+  
+  font-family: 'Jost', sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 2em;
+  color:  #37371F;
+  letter-spacing:1.5px;
+}
+#fact {
+  border-style: none;
+  padding: 0px;
+  margin:40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family:'Source Code Pro', monospace;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.2em;
+  color: #4B5842;
+  padding:10px;
+}
+.attribution {
+  text-align: center;
+  text-decoration:none;
+}
+#factBtn {
+  font-family: 'Inter', sans-serif;
+  font-size:17px;
+  padding:10px;
+  border-radius:40px;
+  letter-spacing: 4px;
+  color: white;
+  background:linear-gradient(90deg,#4B5842, #90b53b, #C7D59F);
+}
+#factBtn:hover {
+  background:black;
+  cursor:pointer;
+}
+.factText {
+  font-size:17px;
+  margin:4px; 
+}
+/*take action*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Inter', sans-serif;
+}
+.keySub {
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin:0 auto;
+  font-family: 'Inter', sans-serif;
+  color:#3FA34D;
+  margin-bottom:25px;
+}
+.keyPara {
+   text-align: center;
+  width: 80%;
+  display: block;
+  margin:0 auto;
+  font-family: 'Inter', sans-serif;
+  color:#5BBA6F;
+  font-size:20px;
+ }
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 35px;
+  margin-bottom:35px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #8FB339;
+  border-radius:10px;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/*cards*/
+
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-left:20px;
+}
+.container .cards{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .cards .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .cards .face.face1{
+    position: relative;
+    background: #054A29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.container .cards:hover .face.face1{
+    background: #5BBA6F;
+    transform: translateY(0);
+}
+.container .cards .face.face1 .content{
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.container .cards:hover .face.face1 .content{
+    opacity: 1;
+}
+.container .cards .face.face1 .content img{
+    max-width: 100px;
+}
+.container .cards .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
+.container .cards .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+.container .cards:hover .face.face2{
+    transform: translateY(0);
+}
+.container .cards .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+.container .cards .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+.container .cards .face.face2 .content a:hover{
+    background: #333;
+    color: #fff;
+}
+.content {
+  text-align:center;
+}
+/*what is the anthropocene?*/
+.intro {
+  margin-bottom:60px;
+}
+
+/*wave divider*/
+.editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 50px;
+  
+  margin-bottom:80px;
+  z-index:5px;
+  bottom:9;
+  left:0px;
+  float:left;
+}
+
+.parallax1 > use {
+  animation: move-forever1 10s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax2 > use {
+  animation: move-forever2 8s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax3 > use {
+  animation: move-forever3 6s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+.parallax4 > use {
+  animation: move-forever4 4s linear infinite;
+  &:nth-child(1) {
+    animation-delay: -2s;
+  }
+}
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+@keyframes move-forever3 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
