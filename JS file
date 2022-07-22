@@ -1,0 +1,62 @@
+
+
+//fact gen
+var factList = [
+  "The last decade was the hottest in 125,000 years", 
+  "The ocean absorbs most of the heat we produce", 
+  "Carbon dioxide is at its highest in 2 million Years", 
+  "We are losing 1.2 trillion tons of ice each year", 
+  "More than 100 countries have pledged to end deforestation by 2030", 
+  "Brazil and Indonesia account for almost half of tropical deforestation",
+  "Deforestation contributes about 4.8 billion tonnes of carbon dioxide a year"
+];
+
+var fact = document.getElementById("fact");
+var factBtn = document.getElementById("factBtn");
+var count = 0;
+
+if (factBtn) {
+  factBtn.addEventListener("click", displayFact);
+}
+
+function displayFact() {
+  fact.innerHTML = factList[count];
+  count++;
+  if (count == factList.length) {
+    count = 0;
+  }
+} 
+//take a pledge js
+const body = document.body
+const formSubmit = document.getElementById("form-submit")
+const checkboxes = document.getElementsByClassName("checkbox")
+const checkboxesContainer = document.getElementById("checkboxes-container")
+const form = document.getElementById("form");
+
+formSubmit.setAttribute("disabled", true);
+formSubmit.style.cssText = `
+  cursor: not-allowed;
+  filter: brightness(1.95);
+`;
+Array.from(checkboxes)
+   .forEach(element => {
+    element.addEventListener("click", () => { 
+    formSubmit.removeAttribute("disabled");
+    formSubmit.style.cssText = `
+      cursor: pointer;
+    `;
+   });  
+});
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();  
+  const data = Object.fromEntries(new FormData(e.target).entries());
+  form.innerHTML = `<b style="font-size: 300%; margin-bottom: 0; text-align: center;">&#128587;&#127995;</b> <strong style="color: white;"> Hi ${data.name},</strong>Thank you for submitting your pledge!`;
+  
+  const buttonReset = `<button id="reset" style="cursor: pointer;margin-top: 20px; background: green;color: white;">Reset</button>`;  
+  form.insertAdjacentHTML("beforeend", buttonReset);
+  document.getElementById("reset").addEventListener("click", () => {
+    //form.reset();  
+    location.reload(true);
+  });    
+});
